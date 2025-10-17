@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation - AI Tools</title>
+    <meta name="description" content="Complete documentation for AI Tools - Learn how to use our AI-powered platform effectively.">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/dark.css">
+    <link rel="stylesheet" href="../assets/css/rtl.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        .doc-layout {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .doc-sidebar {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 2rem;
+            height: fit-content;
+            position: sticky;
+            top: 100px;
+        }
+        
+        .doc-content {
+            background: white;
+            border-radius: 12px;
+            padding: 3rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .doc-nav {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .doc-nav-item {
+            margin-bottom: 0.5rem;
+        }
+        
+        .doc-nav-link {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: #64748b;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .doc-nav-link:hover,
+        .doc-nav-link.active {
+            background: #6366f1;
+            color: white;
+        }
+        
+        .doc-nav-sub {
+            margin-left: 1rem;
+            margin-top: 0.5rem;
+        }
+        
+        .doc-section {
+            margin-bottom: 3rem;
+        }
+        
+        .doc-section h2 {
+            color: #1e293b;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        
+        .doc-section h3 {
+            color: #374151;
+            margin: 2rem 0 1rem 0;
+        }
+        
+        .doc-section h4 {
+            color: #4b5563;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+        
+        .code-block {
+            background: #f1f5f9;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            overflow-x: auto;
+        }
+        
+        .code-block pre {
+            margin: 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        .code-block code {
+            color: #1e293b;
+        }
+        
+        .alert {
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            border-left: 4px solid;
+        }
+        
+        .alert-info {
+            background: #eff6ff;
+            border-color: #3b82f6;
+            color: #1e40af;
+        }
+        
+        .alert-warning {
+            background: #fffbeb;
+            border-color: #f59e0b;
+            color: #92400e;
+        }
+        
+        .alert-success {
+            background: #f0fdf4;
+            border-color: #10b981;
+            color: #065f46;
+        }
+        
+        .table-responsive {
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+        
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        th {
+            background: #f8fafc;
+            font-weight: 600;
+            color: #374151;
+        }
+        
+        @media (max-width: 1024px) {
+            .doc-layout {
+                grid-template-columns: 1fr;
+                padding: 1rem;
+            }
+            
+            .doc-sidebar {
+                position: static;
+                order: 2;
+            }
+            
+            .doc-content {
+                order: 1;
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header"></header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="doc-layout">
+            <!-- Sidebar -->
+            <aside class="doc-sidebar">
+                <h3>Documentation</h3>
+                <nav class="doc-nav">
+                    <ul>
+                        <li class="doc-nav-item">
+                            <a href="#getting-started" class="doc-nav-link active">Getting Started</a>
+                        </li>
+                        <li class="doc-nav-item">
+                            <a href="#api-reference" class="doc-nav-link">API Reference</a>
+                        </li>
+                        <li class="doc-nav-item">
+                            <a href="#ai-tools" class="doc-nav-link">AI Tools</a>
+                            <ul class="doc-nav-sub">
+                                <li><a href="#content-generator" class="doc-nav-link">Content Generator</a></li>
+                                <li><a href="#image-editor" class="doc-nav-link">Image Editor</a></li>
+                                <li><a href="#translation" class="doc-nav-link">Translation</a></li>
+                            </ul>
+                        </li>
+                        <li class="doc-nav-item">
+                            <a href="#integrations" class="doc-nav-link">Integrations</a>
+                        </li>
+                        <li class="doc-nav-item">
+                            <a href="#webhooks" class="doc-nav-link">Webhooks</a>
+                        </li>
+                        <li class="doc-nav-item">
+                            <a href="#examples" class="doc-nav-link">Examples</a>
+                        </li>
+                        <li class="doc-nav-item">
+                            <a href="#troubleshooting" class="doc-nav-link">Troubleshooting</a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- Content -->
+            <div class="doc-content">
+                <!-- Getting Started -->
+                <section class="doc-section" id="getting-started">
+                    <h2>Getting Started</h2>
+                    <p>Welcome to AI Tools! This documentation will help you get up and running quickly with our platform.</p>
+                    
+                    <h3>Quick Start</h3>
+                    <ol>
+                        <li>Sign up for a free account</li>
+                        <li>Get your API key from the dashboard</li>
+                        <li>Make your first API call</li>
+                        <li>Explore our AI tools</li>
+                    </ol>
+                    
+                    <div class="alert alert-info">
+                        <strong>Note:</strong> All new accounts include a 14-day free trial with full access to our features.
+                    </div>
+                    
+                    <h3>Authentication</h3>
+                    <p>AI Tools uses API keys for authentication. Include your API key in the Authorization header:</p>
+                    
+                    <div class="code-block">
+                        <pre><code>curl -H "Authorization: Bearer YOUR_API_KEY" \
+     https://api.aitools.com/v1/tools</code></pre>
+                    </div>
+                    
+                    <h3>Rate Limits</h3>
+                    <p>API requests are limited based on your plan:</p>
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Plan</th>
+                                    <th>Requests per Minute</th>
+                                    <th>Requests per Month</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Starter</td>
+                                    <td>10</td>
+                                    <td>1,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Professional</td>
+                                    <td>100</td>
+                                    <td>10,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Enterprise</td>
+                                    <td>1,000</td>
+                                    <td>Unlimited</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- API Reference -->
+                <section class="doc-section" id="api-reference">
+                    <h2>API Reference</h2>
+                    <p>Our REST API provides programmatic access to all AI tools and features.</p>
+                    
+                    <h3>Base URL</h3>
+                    <div class="code-block">
+                        <pre><code>https://api.aitools.com/v1</code></pre>
+                    </div>
+                    
+                    <h3>Content Generator API</h3>
+                    <h4>Generate Content</h4>
+                    <p>Create high-quality content using our AI content generator:</p>
+                    
+                    <div class="code-block">
+                        <pre><code>POST /content/generate
+Content-Type: application/json
+Authorization: Bearer YOUR_API_KEY
+
+{
+  "type": "blog_post",
+  "topic": "Artificial Intelligence in Business",
+  "length": "medium",
+  "tone": "professional",
+  "keywords": ["AI", "automation", "productivity"]
+}</code></pre>
+                    </div>
+                    
+                    <h4>Response</h4>
+                    <div class="code-block">
+                        <pre><code>{
+  "success": true,
+  "data": {
+    "id": "content_123",
+    "title": "How AI is Transforming Modern Business Operations",
+    "content": "...",
+    "word_count": 850,
+    "created_at": "2024-01-15T10:30:00Z"
+  }
+}</code></pre>
+                    </div>
+                    
+                    <h3>Image Editor API</h3>
+                    <h4>Enhance Image</h4>
+                    <p>Enhance images using AI-powered editing tools:</p>
+                    
+                    <div class="code-block">
+                        <pre><code>POST /images/enhance
+Content-Type: multipart/form-data
+Authorization: Bearer YOUR_API_KEY
+
+{
+  "image": "file_data",
+  "enhancements": ["brightness", "contrast", "sharpness"],
+  "quality": "high"
+}</code></pre>
+                    </div>
+                </section>
+
+                <!-- AI Tools -->
+                <section class="doc-section" id="ai-tools">
+                    <h2>AI Tools</h2>
+                    <p>Our comprehensive suite of AI-powered tools for content creation, analysis, and automation.</p>
+                    
+                    <h3 id="content-generator">Content Generator</h3>
+                    <p>Generate high-quality content for various purposes including blogs, social media, emails, and marketing materials.</p>
+                    
+                    <h4>Supported Content Types</h4>
+                    <ul>
+                        <li>Blog posts and articles</li>
+                        <li>Social media posts</li>
+                        <li>Email campaigns</li>
+                        <li>Product descriptions</li>
+                        <li>Press releases</li>
+                        <li>Website copy</li>
+                    </ul>
+                    
+                    <h4>Parameters</h4>
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Parameter</th>
+                                    <th>Type</th>
+                                    <th>Required</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>type</td>
+                                    <td>string</td>
+                                    <td>Yes</td>
+                                    <td>Content type (blog_post, social_media, email, etc.)</td>
+                                </tr>
+                                <tr>
+                                    <td>topic</td>
+                                    <td>string</td>
+                                    <td>Yes</td>
+                                    <td>Main topic or subject</td>
+                                </tr>
+                                <tr>
+                                    <td>length</td>
+                                    <td>string</td>
+                                    <td>No</td>
+                                    <td>Content length (short, medium, long)</td>
+                                </tr>
+                                <tr>
+                                    <td>tone</td>
+                                    <td>string</td>
+                                    <td>No</td>
+                                    <td>Writing tone (professional, casual, friendly)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <h3 id="image-editor">Image Editor</h3>
+                    <p>Enhance and edit images with AI-powered tools for professional results.</p>
+                    
+                    <h4>Available Enhancements</h4>
+                    <ul>
+                        <li>Auto enhancement (brightness, contrast, saturation)</li>
+                        <li>Background removal</li>
+                        <li>Object detection and segmentation</li>
+                        <li>Style transfer</li>
+                        <li>Super resolution upscaling</li>
+                        <li>Color correction</li>
+                    </ul>
+                    
+                    <h3 id="translation">Translation Tool</h3>
+                    <p>Translate text across 100+ languages with context-aware AI translation.</p>
+                    
+                    <h4>Supported Languages</h4>
+                    <p>Our translation tool supports over 100 languages including:</p>
+                    <ul>
+                        <li>English, Spanish, French, German, Italian</li>
+                        <li>Chinese (Simplified & Traditional), Japanese, Korean</li>
+                        <li>Arabic, Hindi, Portuguese, Russian</li>
+                        <li>And many more...</li>
+                    </ul>
+                </section>
+
+                <!-- Integrations -->
+                <section class="doc-section" id="integrations">
+                    <h2>Integrations</h2>
+                    <p>Connect AI Tools with your existing workflow through our extensive integration library.</p>
+                    
+                    <h3>Popular Integrations</h3>
+                    <ul>
+                        <li><strong>Slack:</strong> Generate content directly in Slack channels</li>
+                        <li><strong>Salesforce:</strong> Automate lead generation and content creation</li>
+                        <li><strong>HubSpot:</strong> Sync content and analytics data</li>
+                        <li><strong>WordPress:</strong> Auto-publish generated content</li>
+                        <li><strong>Zapier:</strong> Connect with 3000+ apps</li>
+                    </ul>
+                    
+                    <h3>Webhook Integration</h3>
+                    <p>Receive real-time notifications when content is generated or processed:</p>
+                    
+                    <div class="code-block">
+                        <pre><code>POST /webhooks
+Content-Type: application/json
+Authorization: Bearer YOUR_API_KEY
+
+{
+  "url": "https://your-app.com/webhook",
+  "events": ["content.generated", "image.processed"],
+  "secret": "your_webhook_secret"
+}</code></pre>
+                    </div>
+                </section>
+
+                <!-- Webhooks -->
+                <section class="doc-section" id="webhooks">
+                    <h2>Webhooks</h2>
+                    <p>Webhooks allow you to receive real-time notifications when events occur in your AI Tools account.</p>
+                    
+                    <h3>Supported Events</h3>
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Event</th>
+                                    <th>Description</th>
+                                    <th>Payload</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>content.generated</td>
+                                    <td>Triggered when content generation is completed</td>
+                                    <td>Content object with ID, title, and content</td>
+                                </tr>
+                                <tr>
+                                    <td>image.processed</td>
+                                    <td>Triggered when image processing is completed</td>
+                                    <td>Image object with ID, URL, and metadata</td>
+                                </tr>
+                                <tr>
+                                    <td>translation.completed</td>
+                                    <td>Triggered when translation is completed</td>
+                                    <td>Translation object with original and translated text</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <h3>Webhook Security</h3>
+                    <p>All webhooks include a signature header for verification:</p>
+                    
+                    <div class="code-block">
+                        <pre><code>X-AI-Tools-Signature: sha256=abc123...</code></pre>
+                    </div>
+                    
+                    <div class="alert alert-warning">
+                        <strong>Important:</strong> Always verify webhook signatures to ensure requests are from AI Tools.
+                    </div>
+                </section>
+
+                <!-- Examples -->
+                <section class="doc-section" id="examples">
+                    <h2>Examples</h2>
+                    <p>Practical examples to help you get started with our API.</p>
+                    
+                    <h3>JavaScript Example</h3>
+                    <div class="code-block">
+                        <pre><code>const axios = require('axios');
+
+const generateContent = async () => {
+  try {
+    const response = await axios.post(
+      'https://api.aitools.com/v1/content/generate',
+      {
+        type: 'blog_post',
+        topic: 'AI in Healthcare',
+        length: 'medium',
+        tone: 'professional'
+      },
+      {
+        headers: {
+          'Authorization': 'Bearer YOUR_API_KEY',
+          'Content-Type': 'application/json'
+        }
+      }
+    );
+    
+    console.log('Generated content:', response.data);
+  } catch (error) {
+    console.error('Error:', error.response.data);
+  }
+};
+
+generateContent();</code></pre>
+                    </div>
+                    
+                    <h3>Python Example</h3>
+                    <div class="code-block">
+                        <pre><code>import requests
+
+def generate_content():
+    url = 'https://api.aitools.com/v1/content/generate'
+    headers = {
+        'Authorization': 'Bearer YOUR_API_KEY',
+        'Content-Type': 'application/json'
+    }
+    data = {
+        'type': 'blog_post',
+        'topic': 'AI in Healthcare',
+        'length': 'medium',
+        'tone': 'professional'
+    }
+    
+    response = requests.post(url, json=data, headers=headers)
+    
+    if response.status_code == 200:
+        return response.json()
+    else:
+        raise Exception(f'Error: {response.text}')
+
+# Generate content
+content = generate_content()
+print(content)</code></pre>
+                    </div>
+                </section>
+
+                <!-- Troubleshooting -->
+                <section class="doc-section" id="troubleshooting">
+                    <h2>Troubleshooting</h2>
+                    <p>Common issues and their solutions.</p>
+                    
+                    <h3>Authentication Errors</h3>
+                    <div class="alert alert-warning">
+                        <strong>401 Unauthorized:</strong> Check that your API key is correct and included in the Authorization header.
+                    </div>
+                    
+                    <h3>Rate Limit Errors</h3>
+                    <div class="alert alert-warning">
+                        <strong>429 Too Many Requests:</strong> You've exceeded your rate limit. Wait before making more requests or upgrade your plan.
+                    </div>
+                    
+                    <h3>Content Generation Issues</h3>
+                    <ul>
+                        <li>Ensure the topic is clear and specific</li>
+                        <li>Check that the content type is supported</li>
+                        <li>Verify your account has sufficient credits</li>
+                    </ul>
+                    
+                    <h3>Getting Help</h3>
+                    <p>If you're still experiencing issues:</p>
+                    <ul>
+                        <li>Check our <a href="../faq.html">FAQ page</a></li>
+                        <li>Contact our <a href="../contact.html">support team</a></li>
+                        <li>Join our <a href="#">community forum</a></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer"></footer>
+
+    <!-- JavaScript Files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+    <!-- Load Partials -->
+    <script>
+        fetch('../partials/header.html').then(r => r.text()).then(data => document.getElementById('header').innerHTML = data);
+        fetch('../partials/footer.html').then(r => r.text()).then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+
+    <!-- Documentation Navigation Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.doc-nav-link');
+            const sections = document.querySelectorAll('.doc-section');
+            
+            // Handle navigation clicks
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    
+                    // Remove active class from all links
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    
+                    // Add active class to clicked link
+                    this.classList.add('active');
+                    
+                    // Scroll to section
+                    const targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        targetSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+            
+            // Update active link on scroll
+            window.addEventListener('scroll', function() {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (scrollY >= (sectionTop - 200)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#' + current) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

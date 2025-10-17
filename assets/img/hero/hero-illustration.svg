@@ -1,0 +1,36 @@
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="brain" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="chart" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Main Brain Icon -->
+  <ellipse cx="300" cy="200" rx="120" ry="80" fill="url(#brain)"/>
+  <path d="M 200 160 Q 250 140 300 160 Q 350 140 400 160 Q 380 180 350 200 Q 320 220 300 240 Q 280 220 250 200 Q 220 180 200 160 Z" fill="url(#brain)" opacity="0.8"/>
+  
+  <!-- Neural Network Lines -->
+  <line x1="180" y1="180" x2="220" y2="160" stroke="#fbbf24" stroke-width="2"/>
+  <line x1="420" y1="180" x2="380" y2="160" stroke="#fbbf24" stroke-width="2"/>
+  <line x1="300" y1="120" x2="300" y2="160" stroke="#fbbf24" stroke-width="2"/>
+  <line x1="300" y1="240" x2="300" y2="280" stroke="#fbbf24" stroke-width="2"/>
+  
+  <!-- Floating Elements -->
+  <circle cx="150" cy="100" r="8" fill="#ef4444"/>
+  <circle cx="450" cy="120" r="6" fill="#3b82f6"/>
+  <circle cx="500" cy="250" r="10" fill="#10b981"/>
+  <circle cx="100" cy="280" r="7" fill="#f59e0b"/>
+  
+  <!-- Chart Elements -->
+  <rect x="450" y="300" width="20" height="60" fill="url(#chart)"/>
+  <rect x="480" y="280" width="20" height="80" fill="url(#chart)"/>
+  <rect x="510" y="320" width="20" height="40" fill="url(#chart)"/>
+  
+  <!-- AI Text -->
+  <text x="300" y="350" font-family="Arial, sans-serif" font-size="16" fill="#64748b" text-anchor="middle">AI Dashboard</text>
+</svg>

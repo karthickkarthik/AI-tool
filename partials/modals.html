@@ -1,0 +1,761 @@
+<!-- Modals Partial -->
+
+<!-- Login Modal -->
+<div class="modal" id="login-modal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 class="modal-title">Welcome Back</h3>
+            <button class="modal-close" data-modal="login-modal">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="modal-body">
+            <form class="auth-form" id="login-form">
+                <div class="form-group">
+                    <label for="login-email" class="form-label">Email Address</label>
+                    <input type="email" id="login-email" name="email" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password" class="form-label">Password</label>
+                    <input type="password" id="login-password" name="password" class="form-input" required>
+                </div>
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="remember">
+                        <span class="checkmark"></span>
+                        Remember me
+                    </label>
+                    <a href="#" class="forgot-password">Forgot password?</a>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Sign In</button>
+            </form>
+            <div class="auth-divider">
+                <span>or</span>
+            </div>
+            <div class="social-auth">
+                <button class="btn btn-social btn-google">
+                    <i class="fab fa-google"></i>
+                    Continue with Google
+                </button>
+                <button class="btn btn-social btn-github">
+                    <i class="fab fa-github"></i>
+                    Continue with GitHub
+                </button>
+            </div>
+            <div class="auth-switch">
+                Don't have an account? <a href="#" data-modal="register-modal">Sign up</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Register Modal -->
+<div class="modal" id="register-modal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 class="modal-title">Create Account</h3>
+            <button class="modal-close" data-modal="register-modal">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="modal-body">
+            <form class="auth-form" id="register-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="register-firstname" class="form-label">First Name</label>
+                        <input type="text" id="register-firstname" name="firstname" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-lastname" class="form-label">Last Name</label>
+                        <input type="text" id="register-lastname" name="lastname" class="form-input" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="register-email" class="form-label">Email Address</label>
+                    <input type="email" id="register-email" name="email" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-password" class="form-label">Password</label>
+                    <input type="password" id="register-password" name="password" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-confirm-password" class="form-label">Confirm Password</label>
+                    <input type="password" id="register-confirm-password" name="confirm_password" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="terms" required>
+                        <span class="checkmark"></span>
+                        I agree to the <a href="terms-of-service.html" target="_blank">Terms of Service</a> and <a href="privacy-policy.html" target="_blank">Privacy Policy</a>
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Create Account</button>
+            </form>
+            <div class="auth-divider">
+                <span>or</span>
+            </div>
+            <div class="social-auth">
+                <button class="btn btn-social btn-google">
+                    <i class="fab fa-google"></i>
+                    Continue with Google
+                </button>
+                <button class="btn btn-social btn-github">
+                    <i class="fab fa-github"></i>
+                    Continue with GitHub
+                </button>
+            </div>
+            <div class="auth-switch">
+                Already have an account? <a href="#" data-modal="login-modal">Sign in</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Contact Modal -->
+<div class="modal" id="contact-modal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content modal-large">
+        <div class="modal-header">
+            <h3 class="modal-title">Get in Touch</h3>
+            <button class="modal-close" data-modal="contact-modal">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="modal-body">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email Us</h4>
+                        <p>hello@aitools.com</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h4>Call Us</h4>
+                        <p>+1 (555) 123-4567</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h4>Business Hours</h4>
+                        <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+                    </div>
+                </div>
+            </div>
+            <form class="contact-form" id="contact-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="contact-name" class="form-label">Full Name</label>
+                        <input type="text" id="contact-name" name="name" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email" class="form-label">Email Address</label>
+                        <input type="email" id="contact-email" name="email" class="form-input" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="contact-subject" class="form-label">Subject</label>
+                    <select id="contact-subject" name="subject" class="form-select" required>
+                        <option value="">Select a subject</option>
+                        <option value="general">General Inquiry</option>
+                        <option value="support">Technical Support</option>
+                        <option value="sales">Sales Question</option>
+                        <option value="partnership">Partnership</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="contact-message" class="form-label">Message</label>
+                    <textarea id="contact-message" name="message" class="form-textarea" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Pricing Calculator Modal -->
+<div class="modal" id="pricing-calculator-modal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content modal-large">
+        <div class="modal-header">
+            <h3 class="modal-title">Calculate Your Pricing</h3>
+            <button class="modal-close" data-modal="pricing-calculator-modal">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="modal-body">
+            <div class="calculator-form">
+                <div class="form-group">
+                    <label for="calc-users" class="form-label">Number of Users</label>
+                    <input type="number" id="calc-users" name="users" class="form-input" min="1" max="1000" value="10">
+                </div>
+                <div class="form-group">
+                    <label for="calc-features" class="form-label">Additional Features</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="features" value="analytics">
+                            <span class="checkmark"></span>
+                            Advanced Analytics (+$25/month)
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="features" value="automation">
+                            <span class="checkmark"></span>
+                            Workflow Automation (+$35/month)
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="features" value="integrations">
+                            <span class="checkmark"></span>
+                            Third-party Integrations (+$15/month)
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="features" value="support">
+                            <span class="checkmark"></span>
+                            Priority Support (+$50/month)
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="calc-billing" class="form-label">Billing Cycle</label>
+                    <select id="calc-billing" name="billing" class="form-select">
+                        <option value="monthly">Monthly</option>
+                        <option value="yearly">Yearly (Save 20%)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="calculator-result">
+                <div class="result-summary">
+                    <h4>Your Estimated Cost</h4>
+                    <div class="result-price">
+                        <span class="price-amount" id="calculated-price">$149</span>
+                        <span class="price-period">/month</span>
+                    </div>
+                </div>
+                <div class="result-breakdown">
+                    <div class="breakdown-item">
+                        <span>Base Plan (10 users)</span>
+                        <span>$99/month</span>
+                    </div>
+                    <div class="breakdown-item">
+                        <span>Additional Users</span>
+                        <span id="additional-users-cost">$0/month</span>
+                    </div>
+                    <div class="breakdown-item">
+                        <span>Additional Features</span>
+                        <span id="features-cost">$0/month</span>
+                    </div>
+                    <div class="breakdown-item total">
+                        <span>Total</span>
+                        <span id="total-cost">$99/month</span>
+                    </div>
+                </div>
+                <button class="btn btn-primary btn-full">Get Started</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Styles -->
+<style>
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.modal.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+}
+
+.modal-content {
+    position: relative;
+    background: white;
+    border-radius: 16px;
+    max-width: 500px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.modal.show .modal-content {
+    transform: scale(1);
+}
+
+.modal-large {
+    max-width: 800px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 2rem 1rem;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.modal-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #64748b;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+    background: #f1f5f9;
+    color: #1e293b;
+}
+
+.modal-body {
+    padding: 2rem;
+}
+
+/* Form Styles */
+.auth-form,
+.contact-form,
+.calculator-form {
+    margin-bottom: 2rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    display: block;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+.checkbox-label input[type="checkbox"] {
+    display: none;
+}
+
+.checkmark {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #d1d5db;
+    border-radius: 4px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.checkbox-label input[type="checkbox"]:checked + .checkmark {
+    background: #6366f1;
+    border-color: #6366f1;
+}
+
+.checkbox-label input[type="checkbox"]:checked + .checkmark::after {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 2px;
+    width: 6px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.forgot-password {
+    color: #6366f1;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.btn-full {
+    width: 100%;
+    justify-content: center;
+}
+
+.auth-divider {
+    text-align: center;
+    margin: 2rem 0;
+    position: relative;
+}
+
+.auth-divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #e5e7eb;
+}
+
+.auth-divider span {
+    background: white;
+    padding: 0 1rem;
+    color: #6b7280;
+    font-size: 0.9rem;
+}
+
+.social-auth {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.btn-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    background: #f8fafc;
+    border: 2px solid #e5e7eb;
+    color: #374151;
+}
+
+.btn-social:hover {
+    background: #f1f5f9;
+    border-color: #d1d5db;
+}
+
+.btn-google:hover {
+    background: #ea4335;
+    border-color: #ea4335;
+    color: white;
+}
+
+.btn-github:hover {
+    background: #333;
+    border-color: #333;
+    color: white;
+}
+
+.auth-switch {
+    text-align: center;
+    color: #6b7280;
+    font-size: 0.9rem;
+}
+
+.auth-switch a {
+    color: #6366f1;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.auth-switch a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Info */
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #f8fafc;
+    border-radius: 12px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact-item i {
+    width: 40px;
+    height: 40px;
+    background: #6366f1;
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-item h4 {
+    margin: 0 0 0.25rem 0;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #374151;
+}
+
+.contact-item p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+/* Calculator Result */
+.calculator-result {
+    background: #f8fafc;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-top: 2rem;
+}
+
+.result-summary {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.result-summary h4 {
+    margin: 0 0 1rem 0;
+    color: #374151;
+    font-size: 1.1rem;
+}
+
+.result-price {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.price-amount {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #6366f1;
+}
+
+.price-period {
+    font-size: 1.2rem;
+    color: #6b7280;
+}
+
+.result-breakdown {
+    margin-bottom: 2rem;
+}
+
+.breakdown-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #e5e7eb;
+    color: #6b7280;
+}
+
+.breakdown-item.total {
+    font-weight: 700;
+    color: #374151;
+    border-bottom: none;
+    border-top: 2px solid #e5e7eb;
+    margin-top: 0.5rem;
+    padding-top: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 767.98px) {
+    .modal-content {
+        width: 95%;
+        margin: 1rem;
+    }
+    
+    .modal-header,
+    .modal-body {
+        padding: 1.5rem;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-options {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+}
+
+/* Dark Theme Styles */
+body.dark-theme .modal-content {
+    background: #1e293b;
+    border: 1px solid #334155;
+}
+
+body.dark-theme .modal-header {
+    border-bottom-color: #334155;
+}
+
+body.dark-theme .modal-title {
+    color: #f8fafc;
+}
+
+body.dark-theme .modal-close {
+    color: #94a3b8;
+}
+
+body.dark-theme .modal-close:hover {
+    background: #334155;
+    color: #f8fafc;
+}
+
+body.dark-theme .form-label {
+    color: #e2e8f0;
+}
+
+body.dark-theme .form-input,
+body.dark-theme .form-select,
+body.dark-theme .form-textarea {
+    background: #334155;
+    border-color: #475569;
+    color: #f8fafc;
+}
+
+body.dark-theme .form-input:focus,
+body.dark-theme .form-select:focus,
+body.dark-theme .form-textarea:focus {
+    border-color: #6366f1;
+}
+
+body.dark-theme .checkbox-label {
+    color: #cbd5e1;
+}
+
+body.dark-theme .checkmark {
+    border-color: #475569;
+}
+
+body.dark-theme .auth-divider span {
+    background: #1e293b;
+    color: #94a3b8;
+}
+
+body.dark-theme .btn-social {
+    background: #334155;
+    border-color: #475569;
+    color: #e2e8f0;
+}
+
+body.dark-theme .auth-switch {
+    color: #94a3b8;
+}
+
+body.dark-theme .contact-info {
+    background: #334155;
+}
+
+body.dark-theme .contact-item h4 {
+    color: #e2e8f0;
+}
+
+body.dark-theme .contact-item p {
+    color: #94a3b8;
+}
+
+body.dark-theme .calculator-result {
+    background: #334155;
+}
+
+body.dark-theme .result-summary h4 {
+    color: #e2e8f0;
+}
+
+body.dark-theme .breakdown-item {
+    border-bottom-color: #475569;
+    color: #94a3b8;
+}
+
+body.dark-theme .breakdown-item.total {
+    color: #e2e8f0;
+    border-top-color: #475569;
+}
+</style>

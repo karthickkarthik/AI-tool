@@ -1,0 +1,426 @@
+<!-- Header Partial -->
+<header class="header" id="header">
+    <div class="container">
+        <nav class="navbar">
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <i class="fas fa-brain"></i>
+                AI Tools
+            </a>
+
+            <!-- Navigation Menu -->
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        Features
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="features.html" class="dropdown-item">All Features</a></li>
+                        <li><a href="features.html#ai-tools" class="dropdown-item">AI Tools</a></li>
+                        <li><a href="features.html#analytics" class="dropdown-item">Analytics</a></li>
+                        <li><a href="features.html#automation" class="dropdown-item">Automation</a></li>
+                        <li><a href="features.html#integrations" class="dropdown-item">Integrations</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="pricing.html" class="nav-link">Pricing</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        Company
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="about.html" class="dropdown-item">About Us</a></li>
+                        <li><a href="team.html" class="dropdown-item">Our Team</a></li>
+                        <li><a href="blog.html" class="dropdown-item">Blog</a></li>
+                        <li><a href="contact.html" class="dropdown-item">Contact</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="faq.html" class="nav-link">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="docs/documentation.html" class="nav-link">Docs</a>
+                </li>
+            </ul>
+
+            <!-- Navigation Actions -->
+            <div class="nav-actions">
+                <!-- Theme Toggle -->
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon"></i>
+                </button>
+
+                <!-- Language Selector -->
+                <div class="language-selector">
+                    <select class="language-select" id="language-select">
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                        <option value="fr">Français</option>
+                        <option value="de">Deutsch</option>
+                        <option value="ar">العربية</option>
+                    </select>
+                </div>
+
+                <!-- Authentication Links -->
+                <div class="auth-links">
+                    <a href="login.html" class="btn btn-outline">Login</a>
+                    <a href="register.html" class="btn btn-primary">Get Started</a>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<!-- Header Styles -->
+<style>
+.header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.header.scrolled {
+    padding: 0.5rem 0;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #6366f1;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo i {
+    font-size: 1.8rem;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.nav-link:hover {
+    color: #6366f1;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 0;
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1001;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-item {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: #666;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background: #f8fafc;
+    color: #6366f1;
+}
+
+.nav-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.theme-toggle {
+    position: relative;
+    width: 50px;
+    height: 25px;
+    background: #e5e7eb;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+}
+
+.theme-toggle.active {
+    background: #6366f1;
+}
+
+.theme-toggle i {
+    font-size: 0.8rem;
+    color: white;
+    transition: opacity 0.3s ease;
+}
+
+.theme-toggle i:first-child {
+    opacity: 1;
+}
+
+.theme-toggle i:last-child {
+    opacity: 0;
+    position: absolute;
+}
+
+.theme-toggle.active i:first-child {
+    opacity: 0;
+}
+
+.theme-toggle.active i:last-child {
+    opacity: 1;
+}
+
+.language-selector {
+    position: relative;
+}
+
+.language-select {
+    background: transparent;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    appearance: none;
+    padding-right: 2rem;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 0.5rem center;
+    background-repeat: no-repeat;
+    background-size: 1rem;
+}
+
+.auth-links {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.mobile-menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: #333;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Responsive Design */
+@media (max-width: 991.98px) {
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        padding: 2rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 0 0 16px 16px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+    }
+
+    .nav-menu.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .nav-menu .nav-link {
+        padding: 1rem 0;
+        border-bottom: 1px solid #f3f4f6;
+        display: block;
+    }
+
+    .nav-menu .nav-item:last-child .nav-link {
+        border-bottom: none;
+    }
+
+    .dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        background: #f8fafc;
+        margin-top: 0.5rem;
+        border-radius: 8px;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .auth-links {
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .auth-links .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .nav-actions {
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+    }
+
+    .language-selector {
+        width: 100%;
+    }
+
+    .language-select {
+        width: 100%;
+    }
+}
+
+/* Dark Theme Styles */
+body.dark-theme .header {
+    background: rgba(15, 23, 42, 0.95);
+    border-bottom-color: #334155;
+}
+
+body.dark-theme .logo {
+    color: #6366f1;
+}
+
+body.dark-theme .nav-link {
+    color: #f8fafc;
+}
+
+body.dark-theme .nav-link:hover {
+    color: #6366f1;
+}
+
+body.dark-theme .dropdown-menu {
+    background: #1e293b;
+    border: 1px solid #334155;
+}
+
+body.dark-theme .dropdown-item {
+    color: #cbd5e1;
+}
+
+body.dark-theme .dropdown-item:hover {
+    background: #334155;
+    color: #6366f1;
+}
+
+body.dark-theme .language-select {
+    background: #1e293b;
+    border-color: #334155;
+    color: #f8fafc;
+}
+
+body.dark-theme .mobile-menu-toggle span {
+    background: #f8fafc;
+}
+
+@media (max-width: 991.98px) {
+    body.dark-theme .nav-menu {
+        background: #1e293b;
+        border: 1px solid #334155;
+    }
+
+    body.dark-theme .nav-link {
+        border-bottom-color: #334155;
+    }
+}
+</style>

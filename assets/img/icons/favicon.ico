@@ -1,0 +1,11 @@
+<svg width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="favicon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="32" height="32" rx="6" fill="url(#favicon)"/>
+  <ellipse cx="16" cy="16" rx="8" ry="6" fill="white" opacity="0.9"/>
+  <path d="M 10 13 Q 13 11 16 13 Q 19 11 22 13 Q 20 15 18 17 Q 16 19 16 21 Q 14 19 12 17 Q 10 15 10 13 Z" fill="url(#favicon)" opacity="0.8"/>
+</svg>

@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - AI Tools</title>
+    <meta name="description" content="Stay updated with the latest AI trends, tips, and insights from the AI Tools team. Learn how to leverage artificial intelligence for your business.">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/dark.css">
+    <link rel="stylesheet" href="../assets/css/rtl.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="navbar">
+                <!-- Logo -->
+                <a href="index.html" class="logo">
+                    <i class="fas fa-brain"></i>
+                    AI Tools
+                </a>
+
+                <!-- Navigation Menu -->
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="features.html" class="nav-link">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pricing.html" class="nav-link">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="blog.html" class="nav-link active">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+
+                <!-- Navigation Actions -->
+                <div class="nav-actions">
+                    <!-- Theme Toggle -->
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon"></i>
+                    </button>
+
+                    <!-- Mobile Menu Toggle -->
+                    <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Blog Hero -->
+        <section class="blog-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">AI Insights & Updates</h1>
+                    <p class="hero-description">
+                        Stay ahead of the curve with the latest AI trends, tips, and insights from our expert team.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Categories -->
+        <section class="blog-categories">
+            <div class="container">
+                <div class="categories-nav">
+                    <button class="category-btn active" data-category="all">All Posts</button>
+                    <button class="category-btn" data-category="ai-trends">AI Trends</button>
+                    <button class="category-btn" data-category="tutorials">Tutorials</button>
+                    <button class="category-btn" data-category="case-studies">Case Studies</button>
+                    <button class="category-btn" data-category="product-updates">Product Updates</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Post -->
+        <section class="featured-post">
+            <div class="container">
+                <div class="featured-card">
+                    <div class="featured-image">
+                        <img src="../assets/img/blog/featured-ai-future.jpg" alt="The Future of AI in Business">
+                        <div class="featured-badge">Featured</div>
+                    </div>
+                    <div class="featured-content">
+                        <div class="post-meta">
+                            <span class="post-category">AI Trends</span>
+                            <span class="post-date">December 15, 2024</span>
+                        </div>
+                        <h2 class="post-title">The Future of AI in Business: What to Expect in 2025</h2>
+                        <p class="post-excerpt">
+                            Explore the groundbreaking AI technologies that will reshape how businesses operate in 2025. From advanced automation to predictive analytics, discover the trends that matter most for your organization.
+                        </p>
+                        <div class="post-author">
+                            <img src="../assets/img/team/ceo.jpg" alt="Sarah Johnson" class="author-avatar">
+                            <div class="author-info">
+                                <span class="author-name">Sarah Johnson</span>
+                                <span class="author-title">CEO & Co-Founder</span>
+                            </div>
+                        </div>
+                        <a href="blog-post-1.html" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Grid -->
+        <section class="blog-grid">
+            <div class="container">
+                <div class="blog-posts">
+                    <!-- Post 1 -->
+                    <article class="blog-card" data-category="tutorials">
+                        <div class="blog-image">
+                            <img src="../assets/img/blog/ai-content-creation.jpg" alt="AI Content Creation Guide">
+                            <div class="blog-category">Tutorials</div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="post-meta">
+                                <span class="post-date">December 12, 2024</span>
+                                <span class="read-time">5 min read</span>
+                            </div>
+                            <h3 class="blog-title">Complete Guide to AI Content Creation</h3>
+                            <p class="blog-excerpt">
+                                Learn how to leverage AI tools to create engaging content that resonates with your audience. From blog posts to social media content.
+                            </p>
+                            <div class="blog-author">
+                                <img src="../assets/img/team/head-of-product.jpg" alt="Emily Rodriguez" class="author-avatar">
+                                <span class="author-name">Emily Rodriguez</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Post 2 -->
+                    <article class="blog-card" data-category="case-studies">
+                        <div class="blog-image">
+                            <img src="../assets/img/blog/ecommerce-automation.jpg" alt="E-commerce Automation Case Study">
+                            <div class="blog-category">Case Studies</div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="post-meta">
+                                <span class="post-date">December 10, 2024</span>
+                                <span class="read-time">7 min read</span>
+                            </div>
+                            <h3 class="blog-title">How E-commerce Store Increased Sales by 300% with AI</h3>
+                            <p class="blog-excerpt">
+                                Discover how a small e-commerce business transformed their operations using AI tools for inventory management, customer service, and marketing.
+                            </p>
+                            <div class="blog-author">
+                                <img src="../assets/img/team/cto.jpg" alt="Michael Chen" class="author-avatar">
+                                <span class="author-name">Michael Chen</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Post 3 -->
+                    <article class="blog-card" data-category="product-updates">
+                        <div class="blog-image">
+                            <img src="../assets/img/blog/new-features.jpg" alt="New AI Tools Features">
+                            <div class="blog-category">Product Updates</div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="post-meta">
+                                <span class="post-date">December 8, 2024</span>
+                                <span class="read-time">3 min read</span>
+                            </div>
+                            <h3 class="blog-title">New AI Tools Features: Voice Assistant & Code Generator</h3>
+                            <p class="blog-excerpt">
+                                We're excited to announce two powerful new features that will revolutionize how you work with AI: our Voice Assistant and Code Generator.
+                            </p>
+                            <div class="blog-author">
+                                <img src="../assets/img/team/ceo.jpg" alt="Sarah Johnson" class="author-avatar">
+                                <span class="author-name">Sarah Johnson</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Post 4 -->
+                    <article class="blog-card" data-category="ai-trends">
+                        <div class="blog-image">
+                            <img src="../assets/img/blog/ai-ethics.jpg" alt="AI Ethics in Business">
+                            <div class="blog-category">AI Trends</div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="post-meta">
+                                <span class="post-date">December 5, 2024</span>
+                                <span class="read-time">6 min read</span>
+                            </div>
+                            <h3 class="blog-title">The Importance of AI Ethics in Business</h3>
+                            <p class="blog-excerpt">
+                                As AI becomes more prevalent in business operations, understanding and implementing ethical AI practices is crucial for long-term success.
+                            </p>
+                            <div class="blog-author">
+                                <img src="../assets/img/team/head-of-product.jpg" alt="Emily Rodriguez" class="author-avatar">
+                                <span class="author-name">Emily Rodriguez</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Post 5 -->
+                    <article class="blog-card" data-category="tutorials">
+                        <div class="blog-image">
+                            <img src="../assets/img/blog/automation-workflows.jpg" alt="AI Automation Workflows">
+                            <div class="blog-category">Tutorials</div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="post-meta">
+                                <span class="post-date">December 3, 2024</span>
+                                <span class="read-time">8 min read</span>
+                            </div>
+                            <h3 class="blog-title">Building Effective AI Automation Workflows</h3>
+                            <p class="blog-excerpt">
+                                Step-by-step guide to creating powerful automation workflows that save time and reduce manual work using AI tools.
+                            </p>
+                            <div class="blog-author">
+                                <img src="../assets/img/team/cto.jpg" alt="Michael Chen" class="author-avatar">
+                                <span class="author-name">Michael Chen</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Post 6 -->
+                    <article class="blog-card" data-category="case-studies">
+                        <div class="blog-image">
+                            <img src="../assets/img/blog/startup-success.jpg" alt="Startup AI Success Story">
+                            <div class="blog-category">Case Studies</div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="post-meta">
+                                <span class="post-date">December 1, 2024</span>
+                                <span class="read-time">5 min read</span>
+                            </div>
+                            <h3 class="blog-title">From Startup to Scale: AI-Powered Growth Story</h3>
+                            <p class="blog-excerpt">
+                                How a tech startup used AI tools to scale from 5 to 500 employees while maintaining efficiency and quality.
+                            </p>
+                            <div class="blog-author">
+                                <img src="../assets/img/team/ceo.jpg" alt="Sarah Johnson" class="author-avatar">
+                                <span class="author-name">Sarah Johnson</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Load More Button -->
+                <div class="load-more-container">
+                    <button class="btn btn-secondary btn-large" id="load-more-btn">
+                        <i class="fas fa-plus"></i>
+                        Load More Posts
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Signup -->
+        <section class="newsletter-signup">
+            <div class="container">
+                <div class="newsletter-content">
+                    <h2>Stay Updated with AI Trends</h2>
+                    <p>Get the latest AI insights, tutorials, and product updates delivered straight to your inbox.</p>
+                    <form class="newsletter-form" id="newsletter-form">
+                        <div class="form-group">
+                            <input type="email" placeholder="Enter your email address" required>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i>
+                                Subscribe
+                            </button>
+                        </div>
+                    </form>
+                    <p class="newsletter-note">No spam, unsubscribe at any time.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <div class="copyright">
+                        <p>&copy; 2024 AI Tools. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="../assets/js/main.js"></script>
+
+    <style>
+        /* Blog Hero */
+        .blog-hero {
+            padding: 120px 0 80px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+            animation: float 20s linear infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(-5px, -5px); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Blog Categories */
+        .blog-categories {
+            padding: 40px 0;
+            background: #f8fafc;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .categories-nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .category-btn {
+            padding: 12px 24px;
+            border: 2px solid #e5e7eb;
+            background: white;
+            color: #64748b;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .category-btn:hover,
+        .category-btn.active {
+            border-color: #6366f1;
+            background: #6366f1;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Featured Post */
+        .featured-post {
+            padding: 80px 0;
+        }
+
+        .featured-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            animation: slideInUp 0.8s ease-out;
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .featured-image {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .featured-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .featured-card:hover .featured-image img {
+            transform: scale(1.05);
+        }
+
+        .featured-badge {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: #6366f1;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .featured-content {
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .post-meta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .post-category {
+            background: #f1f5f9;
+            color: #6366f1;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .post-date {
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        .post-title {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #1e293b;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .post-excerpt {
+            color: #64748b;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .post-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .author-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .author-name {
+            font-weight: 600;
+            color: #1e293b;
+        }
+
+        .author-title {
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+
+        /* Blog Grid */
+        .blog-grid {
+            padding: 80px 0;
+        }
+
+        .blog-posts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            animation: fadeInUp 0.6s ease-out both;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .blog-image {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .blog-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .blog-card:hover .blog-image img {
+            transform: scale(1.1);
+        }
+
+        .blog-category {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: rgba(99, 102, 241, 0.9);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .blog-content {
+            padding: 1.5rem;
+        }
+
+        .blog-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .blog-excerpt {
+            color: #64748b;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .blog-author {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .blog-author .author-avatar {
+            width: 35px;
+            height: 35px;
+        }
+
+        .read-time {
+            color: #94a3b8;
+            font-size: 0.85rem;
+        }
+
+        /* Load More */
+        .load-more-container {
+            text-align: center;
+        }
+
+        /* Newsletter Signup */
+        .newsletter-signup {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+
+        .newsletter-content {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .newsletter-content h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #1e293b;
+            margin-bottom: 1rem;
+        }
+
+        .newsletter-content p {
+            color: #64748b;
+            margin-bottom: 2rem;
+        }
+
+        .newsletter-form {
+            margin-bottom: 1rem;
+        }
+
+        .newsletter-form .form-group {
+            display: flex;
+            gap: 1rem;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 12px 16px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .newsletter-form input:focus {
+            outline: none;
+            border-color: #6366f1;
+        }
+
+        .newsletter-note {
+            font-size: 0.9rem;
+            color: #94a3b8;
+        }
+
+        /* Animations */
+        .blog-card:nth-child(1) { animation-delay: 0.1s; }
+        .blog-card:nth-child(2) { animation-delay: 0.2s; }
+        .blog-card:nth-child(3) { animation-delay: 0.3s; }
+        .blog-card:nth-child(4) { animation-delay: 0.4s; }
+        .blog-card:nth-child(5) { animation-delay: 0.5s; }
+        .blog-card:nth-child(6) { animation-delay: 0.6s; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .featured-card {
+                grid-template-columns: 1fr;
+            }
+
+            .featured-content {
+                padding: 2rem;
+            }
+
+            .blog-posts {
+                grid-template-columns: 1fr;
+            }
+
+            .newsletter-form .form-group {
+                flex-direction: column;
+            }
+
+            .categories-nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .category-btn {
+                width: 200px;
+                text-align: center;
+            }
+        }
+
+        /* Dark Theme */
+        .dark-theme .blog-categories {
+            background: #1e293b;
+        }
+
+        .dark-theme .featured-card,
+        .dark-theme .blog-card {
+            background: #334155;
+        }
+
+        .dark-theme .post-title,
+        .dark-theme .blog-title {
+            color: #f8fafc;
+        }
+
+        .dark-theme .post-excerpt,
+        .dark-theme .blog-excerpt {
+            color: #94a3b8;
+        }
+
+        .dark-theme .newsletter-signup {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Theme Toggle
+            const themeToggle = document.getElementById('theme-toggle');
+            const body = document.body;
+
+            const currentTheme = localStorage.getItem('theme') || 'light';
+            body.classList.toggle('dark-theme', currentTheme === 'dark');
+            if (themeToggle) {
+                themeToggle.classList.toggle('active', currentTheme === 'dark');
+            }
+
+            if (themeToggle) {
+                themeToggle.addEventListener('click', function() {
+                    const isDark = body.classList.contains('dark-theme');
+                    
+                    if (isDark) {
+                        body.classList.remove('dark-theme');
+                        localStorage.setItem('theme', 'light');
+                        this.classList.remove('active');
+                    } else {
+                        body.classList.add('dark-theme');
+                        localStorage.setItem('theme', 'dark');
+                        this.classList.add('active');
+                    }
+                });
+            }
+
+            // Mobile Menu Toggle
+            const mobileToggle = document.getElementById('mobile-menu-toggle');
+            const navMenu = document.getElementById('nav-menu');
+
+            if (mobileToggle && navMenu) {
+                mobileToggle.addEventListener('click', function() {
+                    navMenu.classList.toggle('active');
+                    this.classList.toggle('active');
+                });
+            }
+
+            // Category Filter
+            const categoryBtns = document.querySelectorAll('.category-btn');
+            const blogCards = document.querySelectorAll('.blog-card');
+
+            categoryBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const category = btn.getAttribute('data-category');
+                    
+                    // Update active button
+                    categoryBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    
+                    // Show/hide blog cards
+                    blogCards.forEach(card => {
+                        if (category === 'all' || card.getAttribute('data-category') === category) {
+                            card.style.display = 'block';
+                            card.style.animation = 'fadeInUp 0.5s ease-out';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Load More Button
+            const loadMoreBtn = document.getElementById('load-more-btn');
+            if (loadMoreBtn) {
+                loadMoreBtn.addEventListener('click', function() {
+                    this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Loading...';
+                    
+                    setTimeout(() => {
+                        alert('More posts would be loaded here in a real implementation!');
+                        this.innerHTML = '<i class="fas fa-plus"></i> Load More Posts';
+                    }, 1500);
+                });
+            }
+
+            // Newsletter Form
+            const newsletterForm = document.getElementById('newsletter-form');
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const submitBtn = this.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.innerHTML;
+                    
+                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Subscribing...';
+                    
+                    setTimeout(() => {
+                        alert('Thank you for subscribing to our newsletter!');
+                        this.reset();
+                        submitBtn.innerHTML = originalText;
+                    }, 1500);
+                });
+            }
+
+            // Scroll animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe blog cards for scroll animations
+            document.querySelectorAll('.blog-card').forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>

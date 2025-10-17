@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tools - Powerful AI Solutions for Your Business</title>
+    <meta name="description" content="Transform your business with cutting-edge AI tools. Automate workflows, gain insights, and boost productivity with our comprehensive suite of intelligent solutions.">
+    <meta name="keywords" content="AI tools, artificial intelligence, business automation, machine learning, productivity tools">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="AI Tools - Powerful AI Solutions for Your Business">
+    <meta property="og:description" content="Transform your business with cutting-edge AI tools. Automate workflows, gain insights, and boost productivity.">
+    <meta property="og:image" content="assets/img/hero/hero-bg.jpg">
+    <meta property="og:url" content="https://aitools.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI Tools - Powerful AI Solutions for Your Business">
+    <meta name="twitter:description" content="Transform your business with cutting-edge AI tools. Automate workflows, gain insights, and boost productivity.">
+    <meta name="twitter:image" content="assets/img/hero/hero-bg.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/img/icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/icons/favicon-16x16.png">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/dark.css">
+    <link rel="stylesheet" href="../assets/css/rtl.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "AI Tools",
+        "description": "Comprehensive suite of AI-powered business tools",
+        "url": "https://aitools.com",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "offers": {
+            "@type": "Offer",
+            "price": "99",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+    
+    <!-- Preloader Styles -->
+    <style>
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            opacity: 1;
+            visibility: visible;
+            transition: all 0.5s ease;
+        }
+
+        .preloader-content {
+            text-align: center;
+            max-width: 300px;
+            width: 100%;
+        }
+
+        .preloader-logo {
+            margin-bottom: 3rem;
+        }
+
+        .logo-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            animation: logoFloat 2s ease-in-out infinite;
+        }
+
+        .logo-icon i {
+            font-size: 2.5rem;
+            color: white;
+        }
+
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #1e293b;
+            letter-spacing: -0.5px;
+        }
+
+        .preloader-spinner {
+            margin-bottom: 2rem;
+        }
+
+        .spinner-ring {
+            display: inline-block;
+            position: relative;
+            width: 80px;
+            height: 80px;
+        }
+
+        .spinner-ring div {
+            box-sizing: border-box;
+            display: block;
+            position: absolute;
+            width: 64px;
+            height: 64px;
+            margin: 8px;
+            border: 8px solid #6366f1;
+            border-radius: 50%;
+            animation: spinnerRing 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+            border-color: #6366f1 transparent transparent transparent;
+        }
+
+        .spinner-ring div:nth-child(1) { animation-delay: -0.45s; }
+        .spinner-ring div:nth-child(2) { animation-delay: -0.3s; }
+        .spinner-ring div:nth-child(3) { animation-delay: -0.15s; }
+
+        .preloader-text {
+            margin-bottom: 2rem;
+        }
+
+        .loading-text {
+            font-size: 1.1rem;
+            color: #64748b;
+            font-weight: 500;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .loading-dots {
+            display: flex;
+            justify-content: center;
+            gap: 4px;
+        }
+
+        .loading-dots span {
+            width: 8px;
+            height: 8px;
+            background: #6366f1;
+            border-radius: 50%;
+            animation: loadingDots 1.4s ease-in-out infinite both;
+        }
+
+        .loading-dots span:nth-child(1) { animation-delay: -0.32s; }
+        .loading-dots span:nth-child(2) { animation-delay: -0.16s; }
+
+        .preloader-progress {
+            position: relative;
+            background: #e2e8f0;
+            height: 6px;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #6366f1, #8b5cf6);
+            border-radius: 3px;
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        .progress-text {
+            position: absolute;
+            top: -25px;
+            right: 0;
+            font-size: 0.9rem;
+            color: #64748b;
+            font-weight: 600;
+        }
+
+        @keyframes logoFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes spinnerRing {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes loadingDots {
+            0%, 80%, 100% { transform: scale(0); }
+            40% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">
+                <div class="logo-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <div class="logo-text">AI Tools</div>
+            </div>
+            
+            <div class="preloader-spinner">
+                <div class="spinner-ring">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            
+            <div class="preloader-text">
+                <span class="loading-text">Loading amazing AI tools...</span>
+                <div class="loading-dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            
+            <div class="preloader-progress">
+                <div class="progress-bar" id="progress-bar"></div>
+                <div class="progress-text" id="progress-text">0%</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header id="header">
+        <!-- Header content will be loaded here -->
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">
+                            Transform Your Business with 
+                            <span class="gradient-text">AI-Powered Tools</span>
+                        </h1>
+                        <p class="hero-description">
+                            Unlock the full potential of artificial intelligence with our comprehensive suite of intelligent tools. 
+                            Automate workflows, gain valuable insights, and boost productivity like never before.
+                        </p>
+                        <div class="hero-actions">
+                            <a href="#pricing" class="btn btn-primary btn-large">
+                                <i class="fas fa-rocket"></i>
+                                Get Started Free
+                            </a>
+                            <a href="#demo" class="btn btn-secondary btn-large">
+                                <i class="fas fa-play"></i>
+                                Watch Demo
+                            </a>
+                        </div>
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">50K+</span>
+                                <span class="stat-label">Active Users</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">99.9%</span>
+                                <span class="stat-label">Uptime</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">24/7</span>
+                                <span class="stat-label">Support</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="hero-image">
+                            <img src="../assets/img/hero/hero-illustration.svg" alt="AI Tools Dashboard" class="hero-illustration">
+                        </div>
+                        <div class="floating-cards">
+                            <div class="floating-card card-1">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Analytics</span>
+                            </div>
+                            <div class="floating-card card-2">
+                                <i class="fas fa-robot"></i>
+                                <span>Automation</span>
+                            </div>
+                            <div class="floating-card card-3">
+                                <i class="fas fa-brain"></i>
+                                <span>AI Insights</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features" id="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Powerful Features for Modern Businesses</h2>
+                    <p class="section-description">
+                        Discover the comprehensive suite of AI tools designed to streamline your operations and drive growth.
+                    </p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="feature-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3 class="feature-title">AI-Powered Analytics</h3>
+                        <p class="feature-description">
+                            Get deep insights into your business performance with advanced AI analytics that identify trends and opportunities.
+                        </p>
+                        <ul class="feature-list">
+                            <li>Predictive analytics</li>
+                            <li>Real-time dashboards</li>
+                            <li>Custom reports</li>
+                            <li>Data visualization</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="feature-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3 class="feature-title">Workflow Automation</h3>
+                        <p class="feature-description">
+                            Automate repetitive tasks and streamline your processes with intelligent workflow automation tools.
+                        </p>
+                        <ul class="feature-list">
+                            <li>Smart task automation</li>
+                            <li>Process optimization</li>
+                            <li>Integration capabilities</li>
+                            <li>Custom workflows</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="feature-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h3 class="feature-title">Intelligent Chat Support</h3>
+                        <p class="feature-description">
+                            Provide 24/7 customer support with AI-powered chatbots that understand and respond to customer queries.
+                        </p>
+                        <ul class="feature-list">
+                            <li>Natural language processing</li>
+                            <li>Multi-language support</li>
+                            <li>Escalation to humans</li>
+                            <li>Learning capabilities</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="feature-title">Advanced Security</h3>
+                        <p class="feature-description">
+                            Protect your data with enterprise-grade security features and compliance standards.
+                        </p>
+                        <ul class="feature-list">
+                            <li>End-to-end encryption</li>
+                            <li>GDPR compliance</li>
+                            <li>Regular security audits</li>
+                            <li>Access controls</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                        <div class="feature-icon">
+                            <i class="fas fa-plug"></i>
+                        </div>
+                        <h3 class="feature-title">Easy Integrations</h3>
+                        <p class="feature-description">
+                            Connect with your existing tools and platforms through our extensive integration library.
+                        </p>
+                        <ul class="feature-list">
+                            <li>200+ integrations</li>
+                            <li>API access</li>
+                            <li>Custom connectors</li>
+                            <li>Real-time sync</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3 class="feature-title">Mobile & Desktop Apps</h3>
+                        <p class="feature-description">
+                            Access your AI tools anywhere with our responsive web app and native mobile applications.
+                        </p>
+                        <ul class="feature-list">
+                            <li>Cross-platform sync</li>
+                            <li>Offline capabilities</li>
+                            <li>Push notifications</li>
+                            <li>Native performance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tools Section -->
+        <section class="tools" id="tools">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">AI Tools That Drive Results</h2>
+                    <p class="section-description">
+                        Explore our comprehensive collection of AI-powered tools designed for every aspect of your business.
+                    </p>
+                </div>
+                <div class="tools-grid">
+                    <div class="tool-card" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="tool-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h3 class="tool-title">Content Generator</h3>
+                        <p class="tool-description">
+                            Create engaging content for blogs, social media, and marketing campaigns with AI assistance.
+                        </p>
+                        <div class="tool-features">
+                            <span class="tool-feature">Blog Writing</span>
+                            <span class="tool-feature">Social Media</span>
+                            <span class="tool-feature">Email Marketing</span>
+                        </div>
+                        <a href="#" class="tool-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="tool-card" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="tool-icon">
+                            <i class="fas fa-image"></i>
+                        </div>
+                        <h3 class="tool-title">Image Editor</h3>
+                        <p class="tool-description">
+                            Edit and enhance images with AI-powered tools for professional-quality results.
+                        </p>
+                        <div class="tool-features">
+                            <span class="tool-feature">Auto Enhancement</span>
+                            <span class="tool-feature">Background Removal</span>
+                            <span class="tool-feature">Style Transfer</span>
+                        </div>
+                        <a href="#" class="tool-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="tool-card" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="tool-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h3 class="tool-title">Data Analyzer</h3>
+                        <p class="tool-description">
+                            Analyze complex datasets and generate actionable insights with advanced AI algorithms.
+                        </p>
+                        <div class="tool-features">
+                            <span class="tool-feature">Pattern Recognition</span>
+                            <span class="tool-feature">Predictive Models</span>
+                            <span class="tool-feature">Visual Reports</span>
+                        </div>
+                        <a href="#" class="tool-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="tool-card" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="tool-icon">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <h3 class="tool-title">Translation Tool</h3>
+                        <p class="tool-description">
+                            Translate content across 100+ languages with context-aware AI translation technology.
+                        </p>
+                        <div class="tool-features">
+                            <span class="tool-feature">100+ Languages</span>
+                            <span class="tool-feature">Context Aware</span>
+                            <span class="tool-feature">Real-time</span>
+                        </div>
+                        <a href="#" class="tool-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="tool-card" data-aos="zoom-in" data-aos-delay="500">
+                        <div class="tool-icon">
+                            <i class="fas fa-microphone"></i>
+                        </div>
+                        <h3 class="tool-title">Voice Assistant</h3>
+                        <p class="tool-description">
+                            Interact with your tools using natural voice commands and speech recognition.
+                        </p>
+                        <div class="tool-features">
+                            <span class="tool-feature">Voice Commands</span>
+                            <span class="tool-feature">Speech to Text</span>
+                            <span class="tool-feature">Multi-language</span>
+                        </div>
+                        <a href="#" class="tool-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="tool-card" data-aos="zoom-in" data-aos-delay="600">
+                        <div class="tool-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="tool-title">Code Generator</h3>
+                        <p class="tool-description">
+                            Generate clean, efficient code in multiple programming languages with AI assistance.
+                        </p>
+                        <div class="tool-features">
+                            <span class="tool-feature">Multiple Languages</span>
+                            <span class="tool-feature">Code Review</span>
+                            <span class="tool-feature">Documentation</span>
+                        </div>
+                        <a href="#" class="tool-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="pricing" id="pricing">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Simple, Transparent Pricing</h2>
+                    <p class="section-description">
+                        Choose the plan that fits your needs. All plans include our core AI tools and features.
+                    </p>
+                    <div class="pricing-toggle">
+                        <span class="toggle-label">Monthly</span>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="pricing-toggle">
+                            <span class="toggle-slider"></span>
+                        </label>
+                        <span class="toggle-label">Yearly <span class="discount-badge">Save 20%</span></span>
+                    </div>
+                </div>
+                <div class="pricing-grid">
+                    <div class="pricing-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="pricing-header">
+                            <h3 class="plan-name">Starter</h3>
+                            <p class="plan-description">Perfect for individuals and small teams</p>
+                        </div>
+                        <div class="pricing-price">
+                            <span class="price-currency">$</span>
+                            <span class="price-amount">29</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> 5 AI Tools Access</li>
+                            <li><i class="fas fa-check"></i> 1,000 API Calls</li>
+                            <li><i class="fas fa-check"></i> Email Support</li>
+                            <li><i class="fas fa-check"></i> Basic Analytics</li>
+                            <li><i class="fas fa-check"></i> 5GB Storage</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline btn-full">Get Started</a>
+                    </div>
+                    <div class="pricing-card featured" data-aos="fade-up" data-aos-delay="200">
+                        <div class="pricing-badge">Most Popular</div>
+                        <div class="pricing-header">
+                            <h3 class="plan-name">Professional</h3>
+                            <p class="plan-description">Ideal for growing businesses</p>
+                        </div>
+                        <div class="pricing-price">
+                            <span class="price-currency">$</span>
+                            <span class="price-amount">99</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> All AI Tools Access</li>
+                            <li><i class="fas fa-check"></i> 10,000 API Calls</li>
+                            <li><i class="fas fa-check"></i> Priority Support</li>
+                            <li><i class="fas fa-check"></i> Advanced Analytics</li>
+                            <li><i class="fas fa-check"></i> 50GB Storage</li>
+                            <li><i class="fas fa-check"></i> Team Collaboration</li>
+                            <li><i class="fas fa-check"></i> Custom Integrations</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary btn-full">Get Started</a>
+                    </div>
+                    <div class="pricing-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="pricing-header">
+                            <h3 class="plan-name">Enterprise</h3>
+                            <p class="plan-description">For large organizations</p>
+                        </div>
+                        <div class="pricing-price">
+                            <span class="price-currency">$</span>
+                            <span class="price-amount">299</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> All AI Tools Access</li>
+                            <li><i class="fas fa-check"></i> Unlimited API Calls</li>
+                            <li><i class="fas fa-check"></i> 24/7 Phone Support</li>
+                            <li><i class="fas fa-check"></i> Custom Analytics</li>
+                            <li><i class="fas fa-check"></i> Unlimited Storage</li>
+                            <li><i class="fas fa-check"></i> Advanced Security</li>
+                            <li><i class="fas fa-check"></i> Custom Deployment</li>
+                            <li><i class="fas fa-check"></i> Dedicated Manager</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline btn-full">Contact Sales</a>
+                    </div>
+                </div>
+                <div class="pricing-footer">
+                    <p>All plans include a 14-day free trial. No credit card required.</p>
+                    <a href="#" class="pricing-link">View detailed comparison <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials" id="testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">What Our Customers Say</h2>
+                    <p class="section-description">
+                        Join thousands of satisfied customers who have transformed their businesses with our AI tools.
+                    </p>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="testimonial-content">
+                            <div class="testimonial-quote">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p>
+                                "AI Tools has revolutionized our workflow. The automation features alone have saved us 20 hours per week, 
+                                and the analytics insights have helped us make better business decisions."
+                            </p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="../assets/img/testimonials/avatar-1.jpg" alt="Sarah Johnson">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Sarah Johnson</h4>
+                                <p class="author-title">CEO, TechStart Inc.</p>
+                                <div class="author-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="testimonial-content">
+                            <div class="testimonial-quote">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p>
+                                "The content generation tools are incredible. We've increased our content output by 300% while 
+                                maintaining high quality. Our team can now focus on strategy instead of writing."
+                            </p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="../assets/img/testimonials/avatar-2.jpg" alt="Michael Chen">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Michael Chen</h4>
+                                <p class="author-title">Marketing Director, GrowthCorp</p>
+                                <div class="author-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="testimonial-content">
+                            <div class="testimonial-quote">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p>
+                                "As a developer, the code generation tools have been a game-changer. The AI understands context 
+                                perfectly and generates clean, efficient code that follows best practices."
+                            </p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="../assets/img/testimonials/avatar-3.jpg" alt="Emily Rodriguez">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Emily Rodriguez</h4>
+                                <p class="author-title">Lead Developer, CodeCraft</p>
+                                <div class="author-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta" id="cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Ready to Transform Your Business?</h2>
+                    <p class="cta-description">
+                        Join thousands of businesses already using AI Tools to automate workflows, gain insights, and drive growth. 
+                        Start your free trial today and experience the power of AI.
+                    </p>
+                    <div class="cta-actions">
+                        <a href="#" class="btn btn-primary btn-large">
+                            <i class="fas fa-rocket"></i>
+                            Start Free Trial
+                        </a>
+                        <a href="contact.html" class="btn btn-secondary btn-large">
+                            <i class="fas fa-phone"></i>
+                            Talk to Sales
+                        </a>
+                    </div>
+                    <div class="cta-features">
+                        <div class="cta-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>14-day free trial</span>
+                        </div>
+                        <div class="cta-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>No credit card required</span>
+                        </div>
+                        <div class="cta-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Cancel anytime</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <!-- Footer content will be loaded here -->
+    </footer>
+
+    <!-- Modals -->
+    <div id="modals">
+        <!-- Modal content will be loaded here -->
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/plugins.js"></script>
+    <script src="../assets/js/ajax.js"></script>
+
+    <!-- Load Partials -->
+    <script>
+        // Load header
+        fetch('../partials/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data)
+            .catch(error => console.error('Error loading header:', error));
+        
+        // Load footer
+        fetch('../partials/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data)
+            .catch(error => console.error('Error loading footer:', error));
+        
+        // Load modals
+        fetch('../partials/modals.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('modals').innerHTML = data)
+            .catch(error => console.error('Error loading modals:', error));
+    </script>
+
+    <!-- Initialize AOS -->
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+    </script>
+
+    <!-- Preloader Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const preloader = document.getElementById('preloader');
+            const progressBar = document.getElementById('progress-bar');
+            const progressText = document.getElementById('progress-text');
+            
+            // Simulate loading progress
+            let progress = 0;
+            const interval = setInterval(() => {
+                progress += Math.random() * 15;
+                if (progress > 100) progress = 100;
+                
+                if (progressBar) progressBar.style.width = progress + '%';
+                if (progressText) progressText.textContent = Math.round(progress) + '%';
+                
+                if (progress >= 100) {
+                    clearInterval(interval);
+                    setTimeout(() => {
+                        if (preloader) {
+                            preloader.style.opacity = '0';
+                            setTimeout(() => {
+                                preloader.style.display = 'none';
+                            }, 500);
+                        }
+                    }, 500);
+                }
+            }, 100);
+        });
+    </script>
+</body>
+</html>
